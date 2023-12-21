@@ -6,7 +6,7 @@ function(build_submodule PACKAGE_PATH)
   message("Finish configuration for ${ELEMENT}.")
 endfunction()
 
-message(STATUS "Start configuration for modules.")
+message(STATUS "Start configuration for tests.")
 
 file(GLOB ELEMENTS "*")
 
@@ -16,4 +16,4 @@ foreach(ELEMENT ${ELEMENTS})
   endif()
 endforeach()
 
-message(STATUS "Finish configuration for modules.\n")
+message(STATUS "Finish configuration for tests.\n")

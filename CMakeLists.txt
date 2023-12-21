@@ -7,11 +7,11 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 project(
-  CPP_PROJECT_TEMPLATE
+  MATH
   LANGUAGES CXX
   VERSION 1.0.0
   DESCRIPTION "C++ Project Template"
-  HOMEPAGE_URL "https://github.com/NoDaZi"
+  HOMEPAGE_URL "https://github.com/NoDaZi/math"
 )
 message(STATUS)
 message(STATUS "Started all process in ${PROJECT_NAME} CMakeLists.txt.")
@@ -107,11 +107,11 @@ ${${PROJECT_NAME}_SOURCE_FILES}
 )
 
 # ! If you want to add include directories and link libraries, use the following code
-# target_include_directories(${PROJECT_NAME} PUBLIC
-# ${${PROJECT_NAME}_INCLUDE_PATH}
+target_include_directories(${PROJECT_NAME} PUBLIC
+${${PROJECT_NAME}_INCLUDE_PATH}
 
 # ! Add include path here
-# )
+)
 # target_link_libraries(${PROJECT_NAME} PRIVATE
 
 # ! Add libraries here
@@ -123,6 +123,7 @@ ${${PROJECT_NAME}_SOURCE_FILES}
 target_compile_options(${PROJECT_NAME} PRIVATE
 ${CPP_COMFILE_FLAGS}
 )
+add_subdirectory(${${PROJECT_NAME}_TEST_PATH})
 message(STATUS)
 message(STATUS "Finished all process in ${PROJECT_NAME} CMakeLists.txt.")
 message(STATUS)
