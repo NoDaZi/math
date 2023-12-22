@@ -10,7 +10,7 @@ project(
   MATH
   LANGUAGES CXX
   VERSION 1.0.0
-  DESCRIPTION "C++ Project Template"
+  DESCRIPTION "Math Library for C++"
   HOMEPAGE_URL "https://github.com/NoDaZi/math"
 )
 message(STATUS)
@@ -92,19 +92,19 @@ add_subdirectory(${${PROJECT_NAME}_MODULE_PATH})
 add_subdirectory(${${PROJECT_NAME}_APPLICATION_PATH})
 
 set(${PROJECT_NAME}_SOURCE_FILES
-  src/main.cpp
+  src/utils.cpp
   # ! Add source files here
 )
 
 # ! If you want to make a library, use the following code
-# add_library(${PROJECT_NAME} STATIC
-# ${${PROJECT_NAME}_SOURCE_FILES}
-# )
-
-# ! If you want to make an executable, use the following code
-add_executable(${PROJECT_NAME}
+add_library(${PROJECT_NAME} STATIC
 ${${PROJECT_NAME}_SOURCE_FILES}
 )
+
+# ! If you want to make an executable, use the following code
+# add_executable(${PROJECT_NAME}
+# ${${PROJECT_NAME}_SOURCE_FILES}
+# )
 
 # ! If you want to add include directories and link libraries, use the following code
 target_include_directories(${PROJECT_NAME} PUBLIC

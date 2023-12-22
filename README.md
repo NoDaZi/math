@@ -1,3 +1,3 @@
-# Math
+# MATH
 
 The math.
